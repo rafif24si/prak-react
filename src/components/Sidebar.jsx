@@ -5,7 +5,8 @@ import {
   FaHeadset,
   FaPlus,
   FaExclamationCircle,
-  FaBoxOpen, //
+  FaBoxOpen, 
+  FaPuzzlePiece, // TAMBAHAN BARU: Icon untuk menu Components
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
@@ -65,6 +66,13 @@ export default function Sidebar() {
               <FaBoxOpen className="mr-4 text-lg" /> Products
             </NavLink>
           </li>
+          
+          {/* TAMBAHAN BARU: Menu Components */}
+          <li>
+            <NavLink id="menu-components" to="/components" className={menuClass}>
+              <FaPuzzlePiece className="mr-4 text-lg" /> Components
+            </NavLink>
+          </li>
 
           {/* Menu Error Tambahan */}
           <li className="pt-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
@@ -89,7 +97,6 @@ export default function Sidebar() {
       </div>
 
       {/* Footer */}
-      {/* ... (Isi Footer sama persis seperti codingan aslimu, tidak ada yang diubah) ... */}
       <div id="sidebar-footer" className="mt-auto">
         <div
           id="footer-card"

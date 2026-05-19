@@ -16,8 +16,9 @@ const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
 const Login = React.lazy(() => import("./pages/Auth/Login"));
 const Register = React.lazy(() => import("./pages/Auth/Register"));
 const Forgot = React.lazy(() => import("./pages/Auth/Forget"));
-// Tambahkan di bagian Lazy Imports
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+// TAMBAHAN BARU: Import halaman Components
+const ComponentsPage = React.lazy(() => import("./pages/Components")); 
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           <Route path="/products" element={<Products />} /> 
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/customers" element={<Customers />} />
+          {/* TAMBAHAN BARU: Route untuk halaman Components */}
+          <Route path="/components" element={<ComponentsPage />} /> 
           <Route path="/error/:code" element={<ErrorDisplay />} />
           <Route path="*" element={<ErrorDisplay />} />
         </Route>
