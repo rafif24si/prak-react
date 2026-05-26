@@ -19,6 +19,7 @@ const Forgot = React.lazy(() => import("./pages/Auth/Forget"));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
 // TAMBAHAN BARU: Import halaman Components
 const ComponentsPage = React.lazy(() => import("./pages/Components")); 
+const FiturXyz = React.lazy(() => import("./pages/FiturXyz"));
 
 function App() {
   return (
@@ -34,12 +35,14 @@ function App() {
           {/* TAMBAHAN BARU: Route untuk halaman Components */}
           <Route path="/components" element={<ComponentsPage />} /> 
           <Route path="/error/:code" element={<ErrorDisplay />} />
+          <Route path="/fiturxyz" element={<FiturXyz />} />
           <Route path="*" element={<ErrorDisplay />} />
         </Route>
 
         {/* Auth Routes */}
         <Route element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
+          <Route
+           path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot" element={<Forgot />} />
         </Route>

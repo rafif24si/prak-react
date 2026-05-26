@@ -74,6 +74,12 @@ export default function Sidebar() {
             </NavLink>
           </li>
 
+           <li>
+            <NavLink id="menu-components" to="/fiturxyz" className={menuClass}>
+              <FaPuzzlePiece className="mr-4 text-lg" /> FiturXyz
+            </NavLink>
+          </li>
+
           {/* Menu Error Tambahan */}
           <li className="pt-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
             Error Pages
